@@ -1,7 +1,11 @@
 # SendMail
+START
+1. python manage.py migrate 
+2. python manage.py runserver
+
 
 TODO
-- [ ] postgresl
+- [x] postgresl
 - [x] django-environ
 - [X] model + api email
 - [ ] email model field types to change
