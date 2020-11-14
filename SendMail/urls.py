@@ -17,10 +17,11 @@ from django.urls import include, path
 from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
-from api.views import MailboxViewSet
+from api.views import MailboxViewSet, TemplateViewSet
 
 router = routers.DefaultRouter()
 router.register(r'mailbox', MailboxViewSet)
+router.register(r'template', TemplateViewSet)
 
 urlpatterns = [
     path('api/', include(router.urls)),

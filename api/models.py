@@ -9,7 +9,17 @@ class Mailbox(models.Model):
     password = models.CharField(max_length=30)
     email_from = models.CharField(max_length=50)
     use_ssl = models.BooleanField(default=True)
-    is_active =  models.BooleanField(blank=True, default=False)
+    is_active = models.BooleanField(blank=True, default=False)
     date = models.DateTimeField(blank=True)
     last_update = models.DateTimeField(blank=True)
     sent = models.IntegerField(blank=True)
+# todo
+
+
+class Template(models.Model):
+    subject = models.CharField(max_length=100)
+    text = models.TextField()
+    attachment = models.FileField()
+    # todo
+    date = models.DateTimeField()
+    last_update = models.DateTimeField()
