@@ -1,5 +1,6 @@
-from .models import Mailbox, Template
+from .models import Mailbox, Template, Email
 from rest_framework import serializers
+
 
 class MailboxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -15,4 +16,11 @@ class TemplateSerializer(serializers.HyperlinkedModelSerializer):
         model = Template
         fields = ['subject', 'text','attachment', 'date',
         'last_update'
+        ]
+
+
+class EmailSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Email
+        fields = ['mailbox', 'template', 'to' , 'cc', 'bcc', 'reply_to', 'sent_date', 'date'
         ]

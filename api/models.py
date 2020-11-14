@@ -23,3 +23,14 @@ class Template(models.Model):
     # todo
     date = models.DateTimeField()
     last_update = models.DateTimeField()
+
+
+class Email(models.Model):
+    mailbox = models.ForeignKey('Mailbox', null=True, blank=True, on_delete=models.SET_NULL)
+    template = models.ForeignKey('Template', null=True, blank=True, on_delete=models.SET_NULL)
+    to = models.TextField()
+    cc = models.TextField()
+    bcc = models.TextField()
+    reply_to = models.TextField()
+    sent_date = models.DateTimeField(blank=True)
+    date = models.DateTimeField(blank=True)
