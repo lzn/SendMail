@@ -2,7 +2,7 @@
 
 TODO
 - [ ] postgresl
-- [ ] django-environ
+- [x] django-environ
 - [X] model + api email
 - [ ] email model field types to change
 - [ ] rabbitmq
