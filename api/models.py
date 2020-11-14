@@ -1,3 +1,15 @@
 from django.db import models
 
 # Create your models here.
+
+class Mailbox(models.Model):
+    host = models.CharField(max_length=200)
+    port = models.IntegerField(default=465)
+    login = models.CharField(max_length=30)
+    password = models.CharField(max_length=30)
+    email_from = models.CharField(max_length=50)
+    use_ssl = models.BooleanField(default=True)
+    is_active =  models.BooleanField(blank=True, default=False)
+    date = models.DateTimeField(blank=True)
+    last_update = models.DateTimeField(blank=True)
+    sent = models.IntegerField(blank=True)
