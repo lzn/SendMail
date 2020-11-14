@@ -3,7 +3,8 @@
 TODO
 - [ ] postgresl
 - [ ] django-environ
-- [ ] model + api email
+- [X] model + api email
+- [ ] email model field types to change
 - [ ] rabbitmq
 - [ ] cellery
 - [ ] smtp integration
