@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 class MailboxSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Mailbox
-        fields = ['host', 'port','login', 'password',
+        fields = ['id', 'host', 'port','login', 'password',
         'use_ssl', 'is_active', 'date' ,
         'last_update', 'sent'
         ]
