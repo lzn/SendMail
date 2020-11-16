@@ -18,7 +18,7 @@ class MailboxSerializer(serializers.HyperlinkedModelSerializer):
 class TemplateSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Template
-        fields = ['subject', 'text','attachment', 'date',
+        fields = ['id', 'subject', 'text','attachment', 'date',
         'last_update'
         ]
 
@@ -31,5 +31,5 @@ class EmailSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Email
-        fields = ['mailbox', 'template', 'to' , 'cc', 'bcc', 'reply_to', 'sent_date', 'date'
+        fields = ['id', 'mailbox', 'template', 'to' , 'cc', 'bcc', 'reply_to', 'sent_date', 'date'
         ]
