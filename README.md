@@ -2,25 +2,25 @@
 START
 1. Install postgresql
 2. Install rabbitmq
-1. Settings in .env
-1. python manage.py migrate 
-2. python manage.py runserver
-3. celery -A SendMail worker -l info 
+3. Edit settings in .env
+4. run command: python manage.py migrate 
+5. to start server run command: python manage.py runserver
+6. in other terminal run: celery -A SendMail worker -l info 
 
     
 TODO
 - [x] postgresl
 - [x] django-environ
 - [X] model + api email
-- [ ] email model field types to change
+- [x] email model field types to change
 - [x] rabbitmq
 - [x] cellery
-- [ ] smtp integration
-- [ ] cellery retry
+- [x] smtp integration
+- [x] cellery retry
 - [ ] logger logs/email
 - [ ] filter 
 - [ ] instruction
-- [ ] mailbox.sent
-- [ ] last_update
-- [ ] create date
+- [x] mailbox.sent
+- [x] last_update
+- [x] create date
 - [x] active mailbox
