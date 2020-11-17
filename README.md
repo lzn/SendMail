@@ -6,5 +6,5 @@ START
 4. run command: python manage.py migrate 
 5. Create folder logs in project root dir
 6. to start server run command: python manage.py runserver
-7. in other terminal run: celery -A SendMail worker -l info 
+7. in other terminal run: celery -A SendMail worker -l info -f logs/celery.log 
 
