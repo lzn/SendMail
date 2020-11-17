@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets,  mixins
+
+from .filters import EmailFilter
 from .models import Mailbox, Template, Email
 from .serializers import MailboxSerializer, TemplateSerializer, EmailSerializer
 from SendMail.tasks import send_email
@@ -23,6 +25,7 @@ class EmailViewSet(mixins.CreateModelMixin,
                    viewsets.GenericViewSet):
     queryset = Email.objects.all()
     serializer_class = EmailSerializer
+    filterset_class = EmailFilter
 
     def perform_create(self, serializer):
         instance = serializer.save()

@@ -18,9 +18,10 @@ TODO
 - [x] smtp integration
 - [x] cellery retry
 - [ ] logger logs/email
-- [ ] filter 
+- [x] filter 
 - [ ] instruction
 - [x] mailbox.sent
 - [x] last_update
 - [x] create date
 - [x] active mailbox
+- [x] reply tos
